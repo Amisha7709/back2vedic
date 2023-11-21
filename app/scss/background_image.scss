@@ -1,0 +1,58 @@
+.ImageBanner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    color: white;
+    background-color: black;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.GheeImage {
+    background-image: linear-gradient(to bottom,
+            rgba(252, 251, 248, 0.26),
+            rgb(30 31 30 / 17%)),
+        url(../../public/image/Ghee.jpg);
+    background-image: cover;
+}
+
+.MilkImage {
+    background-image: linear-gradient(to bottom,
+            rgba(252, 251, 248, 0.26),
+            rgb(30 31 30 / 17%)),
+        url(../../public/image/milk.jpg);
+    background-image: cover;
+}
+
+.AboutImage {
+    background-image: linear-gradient(to bottom,
+            rgba(252, 251, 248, 0.26),
+            rgb(30 31 30 / 17%)),
+        url(../../public/image/AboutPage.jpg);
+    background-image: cover;
+}
+
+.ShopImage {
+    background-image: linear-gradient(to bottom,
+            rgba(252, 251, 248, 0.26),
+            rgb(30 31 30 / 17%)),
+        url(../../public/image/shopImage.jpg);
+    background-image: cover;
+}
+
+.GalleryImage {
+    background-image: linear-gradient(to bottom,
+            rgba(252, 251, 248, 0.26),
+            rgb(30 31 30 / 17%)),
+        url(../../public/image/galleryimage.jpg);
+    background-image: cover;
+}
+
+.ContactImage {
+    background-image: linear-gradient(to bottom,
+            rgba(252, 251, 248, 0.26),
+            rgb(30 31 30 / 17%)),
+        url(../../public/image/HomePage.jpg);
+    background-image: cover;
+}

@@ -1,0 +1,44 @@
+{
+    "milkData":[
+        
+      {
+        "name": "Energy [Kcal]",
+        "qtn": "897.62"
+    },
+    {
+        "name": "Total Fat",
+        "qtn": "99.7 g"
+    },
+        
+    {
+        "name": "Saturated Fat",
+        "qtn": "65.3 g"
+    },
+
+    {
+        "name": "Cholesterol",
+        "qtn": "Nill"
+    },
+
+    {
+        "name": "Polysaturated Fat",
+        "qtn": "3.49 g"
+    },
+
+    {
+        "name": "Monosaturated Fat",
+        "qtn": "29.81 g"
+    },
+
+    {
+        "name": "Trans Fat",
+        "qtn": "12 g"
+    },
+
+    {
+        "name": "Protein",
+        "qtn": "0.08 g"
+    }
+        
+    ]  
+}

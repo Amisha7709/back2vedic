@@ -1,0 +1,38 @@
+{
+    "answerData":[
+        
+      {
+        "title": "What A2 Milk is?",
+        "dis": "A2 milk generally refers to a variety of cow’s milk that lacks β-casein proteins called A1, instead has the mostly A2 form. The milk is obtained from cows are feed with organic fodder grown on chemical-free soil. The milk is not injected with any kind of antibiotics and hormones. It qualifies as Pure Organic Milk.",
+        "active": true
+      },
+      {
+        "title": "Why choose A2 milk ?",
+        "dis": "This milk is heavy with amino acids, which will fight with obesity, asthma, mental problems. Amino Fatty acid helps to improve body’s fitness and vitality.",
+        "active": false
+      },
+        
+      {
+        "title": "What is the timing of a2 milk delivery?",
+        "dis": "It depends on your area probably we deliver a2 milk in early morning.",
+        "active": false
+      },
+
+      {
+        "title": "Is this a2 milk organic?",
+        "dis": "All process is Automated so hygienic. Its pure, natural & fresh milk. Nothing is removed from milk and added to milk",
+        "active": false
+      },
+      {
+        "title": "Does A2 milk contains lactose?",
+        "dis": "Yes, it contains lactose due to this easy to digest.",
+        "active": false
+      },
+      {
+        "title": "Is A2 milk good for children?",
+        "dis": "Yes,Compared to being as healthy as a mother’s milk, the A2 milk contributes equally in building immunity.",
+        "active": false
+      }
+        
+    ]  
+}
