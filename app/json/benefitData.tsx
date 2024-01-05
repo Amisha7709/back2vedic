@@ -1,52 +1,58 @@
-import Cancer from '@/public/image/cancer.jpg'
-import HeartHealth from '@/public/image/HeartHealth.jpg'
-import Brain from '@/public/image/brain.jpg'
-import Women from '@/public/image/women.jpg'
-import Immunity from '@/public/image/immunity.jpg'
-import Hair from '@/public/image/hair.jpg'
-import Digestion from '@/public/image/digestion.jpg'
-import HeartAttack from '@/public/image/heartAttack.jpg'
+import Cancer from '@/public/image/ReduceCancer.jpg';
+import HeartHealth from '@/public/image/HeartHealth.webp';
+import Brain from '@/public/image/brain.jpg';
+import Women from '@/public/image/women.jpg';
+import Immunity from '@/public/image/immunity.jpg';
+import Hair from '@/public/image/hair.webp';
+import Digestion from '@/public/image/digestion.jpg';
+import HeartAttack from '@/public/image/heartAttack.jpg';
+import { StaticImageData } from 'next/image';
 
-    const benefitData =[
-        {
-            img:Cancer,
-            title:"REDUCE CANCER RISK",
-        },
+interface BenefitItem {
+    img: StaticImageData,
+    title: String
+}
 
-        {
-            img:HeartHealth,
-            title:"PROMOTES HEART HEALTH",
-        },
+export const benefitData: BenefitItem[] = [
+    {
+        img: Cancer,
+        title: "Reduce Cancer Risk",
+    },
 
-        {
-            img:Brain,
-            title:"SUPPORT BRAIN FUNCTION",
-        },
+    {
+        img: Immunity,
+        title: "Improve Immunity",
+    },
 
-        {
-            img:Women,
-            title:"ENHANCES FERTIITY IN WOMAN",
-        },
+    {
+        img: Brain,
+        title: "Support Brain Function",
+    },
 
-        {
-            img:Immunity,
-            title:"IMPROVE IMMUNITY",
-        },
+    {
+        img: Women,
+        title: "Enhances Fertility In Women",
+    },
 
-        {
-            img:Hair,
-            title:"NOURISH SKIN &HAIR",
-        },
+    {
+        img: HeartHealth,
+        title: "Promotes Heart Health",
+    },
 
-        {
-            img:Digestion,
-            title:"HELPS WITH DIGESTION",
-        },
+    {
+        img: Hair,
+        title: "Nourish Skin & Hair",
+    },
 
-        {
-            img:HeartAttack,
-            title:"HELPS PREVENT HEART ATTACK",
-        },
-    ]
+    {
+        img: Digestion,
+        title: "Helps With Digestion",
+    },
+
+    {
+        img: HeartAttack,
+        title: "Helps Prevent Heart Attack",
+    },
+];
 
 export default benefitData;

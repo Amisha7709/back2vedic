@@ -4,72 +4,73 @@ header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Content-Type: application/json');
 
-$response = []; // Create an empty associative array to store the response data
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $formData = json_decode(file_get_contents("php://input"), true);
 
-try {
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $firstName = $_POST["firstName"];
-        $lastName = $_POST["lastName"];
-        $email = $_POST["email"];
-        $mobileNo = $_POST["mobileNo"];
-        $message = $_POST["message"];
+    // Validate and sanitize the common data
+    $firstName = isset($formData['firstName']) ? trim($formData['firstName']) : '';
+    $lastName = isset($formData['lastName']) ? trim($formData['lastName']) : '';
+    $email = isset($formData['email']) ? trim($formData['email']) : '';
+    $mobileNo = isset($formData['mobileNo']) ? trim($formData['mobileNo']) : '';
+
+
+    if (isset($formData['message'])) {
+        $message = isset($formData['message']) ? trim($formData['message']) : '';
 
         if (empty($firstName) || empty($lastName) || empty($email) || empty($mobileNo) || empty($message)) {
-            $response["message"] = "Please fill all the fields"; // Set the error message in the response
-        }else{
-            $response["data"] = [
-                "name" => "$firstName $lastName",
-                "email" => $email,
-                "mobile" => $mobileNo,
-                "message" => $message,
-                "address" => $address
-            ];
+            $response = array("message" => "Please fill all the fields");
+        } else {
 
-            // Handle the form submission
-            $to = "amisha.satpaise@labhi.in";
-            $subject = "Form Submission";
-            
-            $headers = "From: $email";
-            
-            if (isset($selectedPayment["selectedPayment"])) {
+      // Handle the form submission - Send email
+        $to = "amisha.satpaise@labhi.in";
+        $subject = "Form Submission";
+        $headers = "From: $email";
 
-                $address = $_POST["address"];
-                $totalPrice = $_POST["totalPrice"];
-                $quantity = $_POST["quantity"];
-                $selectedPayment = $_POST["selectedPayment"];
+        $emailBody = "Name: $firstName $lastName\n";
+        $emailBody .= "Email: $email\n";
+        $emailBody .= "Mobile Number: $mobileNo\n";
+        $emailBody .= "Message: $message\n";
 
-                $boundary = md5(time());
-                $headers .= "\r\nMIME-Version: 1.0\r\n";
-                $headers .= "Content-Type: application/mixed; boundary=\"$boundary\"\r\n";
+        mail($to, $subject, $emailBody, $headers);
+        $response = array("message" => "Form submitted successfully!");
 
-                $message_body = "--$boundary\r\n";
-
-                $message_body .= "Name: $firstName $lastName\r\n";
-                $message_body .= "Email: $email\r\n";
-                $message_body .= "Mobile: $mobileNo\r\n";
-                $message_body .= "Quantity: $quantity\r\n";
-                $message_body .= "TotalPrice:\r\n$totalPrice\r\n";
-                $message_body .= "Address:\r\n$address\r\n";
-                $message_body .= "SelectedPayment:\r\n$selectedPayment\r\n";
-                $message_body .= "\r\n";
-
-            } else {
-                // contact page
-                $message_body = "Name: $firstName $lastName\r\nEmail: $email\r\nMobile: $mobileNo\r\nMessage:\r\n$message\r\n";
-            }
-
-            if (mail($to, $subject, $message_body, $headers)) {
-                $response["message"] = "Form submit successfully!";
-            } else {
-                $response["message"] = "Form submit failed.";
-            }
         }
     } else {
-        $response["message"] = "Invalid request method. Only POST requests are allowed.";
-    }
-} catch (Exception $e) {
-    $response["message"] = 'Caught exception: ' . $e->getMessage();
-}
+        $selectedProduct = isset($formData['selectedProduct']) ? trim($formData['selectedProduct']) : '';
+        $quantity = isset($formData['quantity']) ? intval($formData['quantity']) : 0;
+        $totalPrice = isset($formData['totalPrice']) ? floatval($formData['totalPrice']) : 0.0;
+        $address = isset($formData['address']) ? trim($formData['address']) : '';
+        $selectedPayment = isset($formData['selectedPayment']) ? trim($formData['selectedPayment']) : '';
 
-echo json_encode($response); // Convert the response array to JSON and echo it
+        if (empty($firstName) || empty($lastName) || empty($email) || empty($mobileNo) || empty($quantity) || $quantity <= 0 || empty($totalPrice) || $totalPrice <= 0 || empty($address) || empty($selectedPayment)) {
+            $response = array("message" => "Invalid data received");
+        } else {
+
+            $to = "amisha.satpaise@labhi.in";
+            $subject = "Order Confirmation";
+            $headers = "From: $email";
+
+            $emailBody = "Product: $selectedProduct\n";
+            $emailBody .= "Name: $firstName $lastName\n";
+            $emailBody .= "Email: $email\n";
+            $emailBody .= "Mobile Number: $mobileNo\n";
+            $emailBody .= "Quantity: $quantity\n";
+            $emailBody .= "Total Price: $totalPrice\n";
+            $emailBody .= "Address: $address\n";
+            $emailBody .= "Payment Method: $selectedPayment\n";
+
+            // Send the email
+           mail($to, $subject, $emailBody, $headers);
+           $response = array("message" => "Order confirmed successfully!");
+
+        }
+    }
+
+    header('Content-Type: application/json');
+    echo json_encode($response);
+} else {
+    $response = array("message" => "Invalid request method");
+    header('Content-Type: application/json');
+    echo json_encode($response);
+}
 ?>

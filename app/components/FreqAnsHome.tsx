@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
-import DataAnswer from './../json/AnswerData.json'
+import { useState } from 'react';
+import DataAnswer from './../json/AnswerData.json';
 import Accordion from './Accordion';
 
 export default function FreqAnsHome() {
 
     const [accordionData, setAccordionData] = useState(DataAnswer.answerData);
     const onAccordionClick = (key: number, value: boolean) => {
-        accordionData.forEach(ele => {
-            ele.active = false;
-        });
-        accordionData[key].active = value;
-        setAccordionData(Object.assign([], accordionData));
+        const updatedAccordionData = accordionData.map((ele, index) => ({
+            ...ele,
+            active: index === key ? value : false
+          }));
+          setAccordionData(updatedAccordionData);
     }
     return (
 

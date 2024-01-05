@@ -1,34 +1,50 @@
 import Ghee from '@/public/image/bottle.png'
-import Milk from '@/public/image/1-liter-milk.jpg'
+import Milk from '@/public/image/Milk-Bottle-1liter.jpg'
+import Egg from '@/public/image/eggs.jpg'
+import { StaticImageData } from 'next/image'
 
-    const imageShop =[
-        {
-            product:"Desi Ghee",
-            image:Ghee,
-            price:2499,
-            qtn:"1000 ml"
-        },
+interface ImageItem {
+    image: StaticImageData,
+    product: string,
+    price: number,
+    qtn: string
+}
 
-        {
-            product:"Desi Ghee",
-            image:Ghee,
-            price:1399,
-            qtn:"500 ml"
-        },
+export const imageShop: ImageItem[] = [
+    {
+        product: "Desi Ghee",
+        image: Ghee,
+        price: 2499,
+        qtn: "1000 ml"
+    },
 
-        {
-            product:"Desi milk",
-            image:Milk,
-            price:99,
-            qtn:"1 lt"
-        },
+    {
+        product: "Desi Ghee",
+        image: Ghee,
+        price: 1399,
+        qtn: "500 ml"
+    },
 
-        {
-            product:"Desi milk",
-            image:Milk,
-            price:49,
-            qtn:"0.05 lt"
-        }
-    ]
+    {
+        product: "Desi milk",
+        image: Milk,
+        price: 80,
+        qtn: "1 lt"
+    },
+
+    {
+        product: "Desi milk",
+        image: Milk,
+        price: 45,
+        qtn: "1/2 lt"
+    },
+
+    {
+        product: "Desi Eggs",
+        image: Egg,
+        price: 150,
+        qtn: "6 Piece"
+    },
+];
 
 export default imageShop;

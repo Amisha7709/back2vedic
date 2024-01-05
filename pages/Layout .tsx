@@ -1,23 +1,27 @@
-// components/Layout.js
 'use client'
-import React from "react";
-import Footer from "@/app/components/Footer";
-import NavBar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer"
+import NavBar from "@/app/components/Navbar"
 import '@/app/globals.css'
 import '@/app/scss/index.scss'
-// import OrderBtn from "@/app/components/OrderBtn";
+import { FaWhatsappSquare } from "react-icons/fa";
+import AosAnimation from "@/app/components/AosAnimation";
+import Link from "next/link"
 
-const Layout = ({ children,
-}: {
-    children: React.ReactNode
-}) => {
+export default function Layout({ children }: { children: React.ReactNode }) {
+
+    AosAnimation();
     return (
         <div>
-            <NavBar/>
-            {children}
+            <NavBar />
+
+            <div>{children}</div>
+            <a
+                href="https://wa.me/+919422550090" target="_blank"
+                className="fixed animate-bounce bottom-[110px] z-50 right-0 text-5xl text-lime-600"
+            >
+                <FaWhatsappSquare />
+            </a>
             <Footer />
         </div>
     );
-};
-
-export default Layout;
+}

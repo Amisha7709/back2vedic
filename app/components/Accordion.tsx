@@ -1,5 +1,3 @@
-'use client'
-
 type AccordionProps = {
     children: React.ReactNode
     title: string
@@ -18,12 +16,19 @@ export default function Accordion({
     onAccordionClick
 }: AccordionProps) {
 
+    const accordionHeadingClass = active ? 'accordionHeading' : '';
+    const accordionTextClass = active ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0';
+    const handleAccordionClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        onAccordionClick(index, !active);
+    };
+
     return (
         <div className={`py-2 rounded shadow ${active ? 'shadow-blue-500' : ''}`}>
-            <h2 className={`px-5  ${active ? 'accordionHeading' : ''}`}>
+            <h2 className={`px-5  ${accordionHeadingClass}`}>
                 <button
-                    className="max-w-7xl mx-auto uppercase  flex items-center text-base lg:text-lg justify-between w-full text-left font-semibold py-2"
-                    onClick={(e) => { e.preventDefault(); onAccordionClick(index, !active) }}
+                    className="max-w-7xl mx-auto uppercase text-blue-900 flex items-center text-base lg:text-lg justify-between w-full text-left font-semibold py-2"
+                    onClick={handleAccordionClick}
                     aria-expanded={active}
                     aria-controls={`accordion-text-${id}`}
                 >
@@ -39,7 +44,7 @@ export default function Accordion({
                     id={`accordion-text-${id}`}
                     role="region"
                     aria-labelledby={`accordion-title-${id}`}
-                    className={`max-w-7xl mx-auto grid text-sm text-gray-600 overflow-hidden transition-all duration-300 ease-in-out ${active ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+                    className={`max-w-7xl mx-auto grid text-sm text-gray-600 overflow-hidden transition-all duration-300 ease-in-out ${accordionTextClass}`}
                 >
                     <div className="overflow-hidden">
                         <p className="pb-3 text-base lg:text-lg ">

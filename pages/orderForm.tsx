@@ -3,6 +3,8 @@ import Layout from '@/pages/Layout '
 import { useRouter } from 'next/router';
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image';
+import { GiThreeLeaves } from 'react-icons/gi';
 
 export default function OrderForm() {
 
@@ -20,15 +22,20 @@ export default function OrderForm() {
     const router = useRouter();
     const { query } = router;
     const [selectedProductPrice, setSelectedProductPrice] = useState('');
+    const [selectedProduct, setSelectedProduct] = useState('');
+    const [selectedImage, setSelectedImage] = useState('');
+
+    console.log("selectedImage", selectedImage)
 
     useEffect(() => {
-        const { price } = query;
+        const { price, product, image } = query;
         setSelectedProductPrice(price as string);
+        setSelectedProduct(product as string);
+        setSelectedImage(image as string);
     }, [query]);
 
     useEffect(() => {
         const initialtotalPrice = Number(quantity) * Number(selectedProductPrice);
-
         // Update total price state
         setTotalPrice(initialtotalPrice);
     }, [quantity, selectedProductPrice]);
@@ -110,47 +117,58 @@ export default function OrderForm() {
     };
 
     const handleUserInput = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const name = e.target.name;
-        const value = e.target.value;
-        setSelectedPayment(e.target.value);
+        const { name, value } = e.target;
+        setSelectedPayment(value);
 
-        setErrors((prevErrors) => ({
+        setErrors(prevErrors => ({
             ...prevErrors,
             [name]: validate(name, value),
         }));
 
-        if (name === "firstName") {
-            setFirstName(value);
-        } else if (name === "lastName") {
-            setLastName(value);
-        } else if (name === "email") {
-            setEmail(value);
-        } else if (name === "mobileNo") {
-            setMobileNo(value);
-        } else if (name === "quantity") {
-            setQuantity(value);
-        } else if (name === "totalPrice") {
-            setTotalPrice(totalPrice);
-        } else if (name === "address") {
-            setAddress(value);
-        } else if (name === "selectedPayment") {
-            setSelectedPayment(value);
+        switch (name) {
+            case "firstName":
+                setFirstName(value);
+                break;
+            case "lastName":
+                setLastName(value);
+                break;
+            case "email":
+                setEmail(value);
+                break;
+            case "mobileNo":
+                setMobileNo(value);
+                break;
+            case "quantity":
+                setQuantity(value);
+                break;
+            case "totalPrice":
+                setTotalPrice(totalPrice);
+                break;
+            case "address":
+                setAddress(value);
+                break;
+            case "selectedPayment":
+                setSelectedPayment(value);
+                break;
+            default:
+                break;
         }
     };
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
-        let validationErrors:{[key: string]: string} = {};
+        let validationErrors: { [key: string]: string } = {};
 
         const formData = {
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            mobileNo: mobileNo,
-            quantity: quantity,
-            totalPrice: totalPrice,
-            address: address,
-            selectedPayment: selectedPayment,
+            selectedProduct,
+            firstName,
+            lastName,
+            email,
+            mobileNo,
+            quantity,
+            totalPrice,
+            address,
+            selectedPayment,
         };
 
         Object.keys(formData).forEach((name) => {
@@ -162,48 +180,49 @@ export default function OrderForm() {
 
         setErrors(validationErrors);
 
-        if (formData.firstName && formData.lastName && formData.email && formData.mobileNo && formData.quantity && formData.totalPrice && formData.address && formData.selectedPayment) {
+        if (Object.values(formData).every((value) => value)) {
             try {
-                const response = await axios.post('/ProcessContact.php', formData, {
-                    method:'POST',
+                const response = await axios.post('https://info.labhi.in/backtovedic-php/server.php', formData, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
                 });
                 const data = response.data;
                 setResult(data);
 
-                if (data.message === "Form submit successfully!") {
-                    router.push('/orderConfirm');
+                if (data.message === "Order confirmed successfully!") {
+                    alert(data.message);
+                    router.push("/orderConfirm");
                     clearInput();
                 } else {
                     clearInput();
-                    alert(data.message);
                 }
 
                 console.log("result", result);
             } catch (error) {
-                // Handle error here
                 console.error('Error:', error);
                 alert(error)
             }
         }
-
     };
     return (
         <Layout>
-            <div className="w-screen ">
-                <div className="ImageBanner HomeImage h-72 md:h-[70vh] lg:h-[80vh] bg-no-repeat bg-cover flex justify-center items-center bg-center">
-                    <div className='mt-5 max-w-screen-xl mx-auto px-4 heading-service text-center'>
-                        <p className="text-xl sm:text-3xl lg:text-4xl "> Original</p>
-                        <p className=' text-2xl sm:text-4xl lg:text-6xl font-semibold'>GIR COW PRODUCT</p>
-                        <p className=' text-3xl sm:text-5xl lg:text-7xl font-bold text-amber-500'>Order Now</p>
-                    </div>
+            <div >
+                <div className="ImageBanner OrderImage h-60 md:h-[70vh] lg:h-[80vh] img_ratio bg-no-repeat flex justify-center items-center">
                 </div>
-                <div className="max-w-screen-xl mx-auto px-4">
-                    <h3 className="text-5xl font-bold my-6">Order Now</h3>
+                <div className="max-w-screen-xl mx-auto px-4 ">
+                    <h1 className="text-4xl font-semibold my-6 text-center" data-aos='fade-up' data-aos-duration="800">Order Now
+                        <div className='text-lime-600 flex items-center justify-center'><span className='text-gray-300 font-thin'>---------</span><GiThreeLeaves /><span className='text-gray-300 font-thin'>---------</span></div>
+                    </h1>
                     <form onSubmit={(e) => { handleSubmit(e) }}>
                         <div className="relative flex-auto pr-5 pl-6">
+                            <div className='flex'>
+                                <p className='text-3xl text-amber-500 font-bold mb-5'>{selectedProduct}</p>
+                                <Image src={selectedImage} alt='this is image' width={100} height={100} className='my-auto' />
+                            </div>
                             <div className="flex md:flex-row flex-col justify-between gap-4 md:gap-8 mb-2">
                                 <div className="mb-4 w-full md:w-1/2 flex-1 flex flex-col items-start justify-start gap-2">
-                                    <label className="block text-sm font-bold mb-2">First Name</label>
+                                    <label className="block text-lg font-semibold mb-2">First Name</label>
                                     <input type="text"
                                         className="w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg "
                                         name="firstName"
@@ -214,7 +233,7 @@ export default function OrderForm() {
                                     {errors.firstName && <span className="text-red-500">{errors.firstName}</span>}
                                 </div>
                                 <div className="mb-4 w-full md:w-1/2 flex-1 flex flex-col items-start justify-start gap-2">
-                                    <label className="block text-sm font-bold mb-2"> Last Name</label>
+                                    <label className="block text-lg font-semibold mb-2"> Last Name</label>
                                     <input type="text"
                                         className="w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg "
                                         name="lastName"
@@ -227,7 +246,7 @@ export default function OrderForm() {
                             </div>
                             <div className="flex md:flex-row flex-col justify-between gap-4 md:gap-8 mb-2">
                                 <div className="mb-4 w-full md:w-1/2 flex-1 flex flex-col items-start justify-start gap-2">
-                                    <label className="block text-sm font-bold mb-2">Email</label>
+                                    <label className="block text-lg font-semibold mb-2">Email</label>
                                     <input type="email"
                                         className="w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg "
                                         name="email"
@@ -238,7 +257,7 @@ export default function OrderForm() {
                                     {errors.email && <span className="text-red-500">{errors.email}</span>}
                                 </div>
                                 <div className="mb-4 w-full md:w-1/2 flex-1 flex flex-col items-start justify-start gap-2">
-                                    <label className="block text-sm font-bold mb-2">Mobile number</label>
+                                    <label className="block text-lg font-semibold mb-2">Mobile number</label>
                                     <input type="tel"
                                         className="w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg "
                                         name="mobileNo"
@@ -251,7 +270,7 @@ export default function OrderForm() {
                             </div>
                             <div className="self-stretch flex md:flex-row flex-col justify-between gap-4 md:gap-8 mb-2">
                                 <div className="mb-4 w-full md:w-1/2 flex-1 flex flex-col items-start justify-start gap-2">
-                                    <label className="block text-sm font-bold mb-2">Quantity</label>
+                                    <label className="block text-lg font-semibold mb-2">Quantity</label>
                                     <input type="number"
                                         className="w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg"
                                         name="quantity"
@@ -263,7 +282,7 @@ export default function OrderForm() {
                                 </div>
 
                                 <div className="mb-4 w-full md:w-1/2 flex-1 flex flex-col items-start justify-start gap-2">
-                                    <label className="block text-sm font-bold mb-2">Price</label>
+                                    <label className="block text-lg font-semibold mb-2">Price</label>
                                     <input type="number"
                                         className="w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg"
                                         id="price"
@@ -274,8 +293,8 @@ export default function OrderForm() {
                                 </div>
                             </div>
                             <div>
-                                <label className="block text-sm font-bold mb-2">Full Address</label>
-                                <textarea typeof=''
+                                <label className="block text-lg font-semibold mb-2">Full Address</label>
+                                <textarea
                                     name="address" rows={5}
                                     className="py-2 px-3 leading-tight w-full border border-gray-400 outline-none text-sm rounded-lg resize-none"
                                     value={address}
@@ -287,7 +306,7 @@ export default function OrderForm() {
                             </div>
 
                             <div className="mt-4 w-full flex md:flex-row flex-col items-start justify-start gap-2">
-                                <label className="block text-sm font-bold md:mr-10">Payment Mode</label>
+                                <label className="block text-lg font-semibold md:mr-10">Payment Mode</label>
                                 <label>
                                     <input type="radio"
                                         value='cashOnDelivery'
@@ -295,13 +314,13 @@ export default function OrderForm() {
                                         checked={selectedPayment === 'cashOnDelivery'}
                                     /> Cash on Delivery
                                 </label>
-                                <label>
+                                {/* <label>
                                     <input type="radio"
                                         value='onlinePayment'
                                         onChange={handleUserInput}
                                         checked={selectedPayment === 'onlinePayment'}
                                     /> Online Payment
-                                </label>
+                                </label> */}
                                 {errors.selectedPayment && <span className="text-red-500">{errors.selectedPayment}</span>}
                             </div>
                         </div>

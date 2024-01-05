@@ -2,7 +2,7 @@
     "answerData":[
         
       {
-        "title": "What A2 Milk is?",
+        "title": "What A2 Milk is ?",
         "dis": "A2 milk generally refers to a variety of cow’s milk that lacks β-casein proteins called A1, instead has the mostly A2 form. The milk is obtained from cows are feed with organic fodder grown on chemical-free soil. The milk is not injected with any kind of antibiotics and hormones. It qualifies as Pure Organic Milk.",
         "active": true
       },
@@ -13,23 +13,23 @@
       },
         
       {
-        "title": "What is the timing of a2 milk delivery?",
-        "dis": "It depends on your area probably we deliver a2 milk in early morning.",
+        "title": "What A2 GHEE is ?",
+        "dis": "A2 ghee is a type of clarified butter made from the milk of cows that specifically produce A2 beta-casein protein. The milk from these cows is distinguished from the more common A1 beta-casein protein found in the milk of many modern dairy cows. A2 milk is believed by some to be easier to digest than A1 milk, and there are claims that A2 ghee may have health benefits.",
         "active": false
       },
 
       {
-        "title": "Is this a2 milk organic?",
-        "dis": "All process is Automated so hygienic. Its pure, natural & fresh milk. Nothing is removed from milk and added to milk",
+        "title": "Is this a2 milk organic ?",
+        "dis": "All process is Automated so hygienic. Its pure, natural & fresh milk. Nothing is removed from milk and added to milk.",
         "active": false
       },
       {
-        "title": "Does A2 milk contains lactose?",
-        "dis": "Yes, it contains lactose due to this easy to digest.",
+        "title": "what is the benefits of country EGGS ?",
+        "dis": "Country eggs, often referred to as farm-fresh or free-range eggs, are eggs laid by hens that are allowed to roam freely outdoors and have a more natural and varied diet compared to conventionally raised hens.",
         "active": false
       },
       {
-        "title": "Is A2 milk good for children?",
+        "title": "Is A2 milk product good for children ?",
         "dis": "Yes,Compared to being as healthy as a mother’s milk, the A2 milk contributes equally in building immunity.",
         "active": false
       }

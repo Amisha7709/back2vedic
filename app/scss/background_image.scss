@@ -2,57 +2,45 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    color: white;
-    background-color: black;
     background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
 }
 
-.GheeImage {
-    background-image: linear-gradient(to bottom,
-            rgba(252, 251, 248, 0.26),
-            rgb(30 31 30 / 17%)),
-        url(../../public/image/Ghee.jpg);
-    background-image: cover;
+.ProductMilk {
+    background-image: url(../../public/image/productMilk.jpg);
 }
 
-.MilkImage {
-    background-image: linear-gradient(to bottom,
-            rgba(252, 251, 248, 0.26),
-            rgb(30 31 30 / 17%)),
-        url(../../public/image/milk.jpg);
-    background-image: cover;
+.ProductGhee {
+    background-image: url(../../public/image/productGhee.jpg);
+}
+
+.ProductEgg {
+    background-image: url(../../public/image/productEgg.jpg);
 }
 
 .AboutImage {
-    background-image: linear-gradient(to bottom,
-            rgba(252, 251, 248, 0.26),
-            rgb(30 31 30 / 17%)),
-        url(../../public/image/AboutPage.jpg);
-    background-image: cover;
+    background-image: url(../../public/image/aboutPage.jpg);
 }
 
 .ShopImage {
-    background-image: linear-gradient(to bottom,
-            rgba(252, 251, 248, 0.26),
-            rgb(30 31 30 / 17%)),
-        url(../../public/image/shopImage.jpg);
-    background-image: cover;
+    background-image: url(../../public/image/shopPage.jpg);
 }
 
 .GalleryImage {
-    background-image: linear-gradient(to bottom,
-            rgba(252, 251, 248, 0.26),
-            rgb(30 31 30 / 17%)),
-        url(../../public/image/galleryimage.jpg);
-    background-image: cover;
+    background-image: url(../../public/image/galleryPage.jpeg);
 }
 
 .ContactImage {
+    background-image: url(../../public/image/contactPage.jpg);
+}
+
+.OrderImage {
+    background-image: url(../../public/image/orderNow.jpeg);
+}
+
+.FooterImage {
     background-image: linear-gradient(to bottom,
-            rgba(252, 251, 248, 0.26),
-            rgb(30 31 30 / 17%)),
-        url(../../public/image/HomePage.jpg);
-    background-image: cover;
+            rgb(16 16 15 / 82%),
+            rgba(30, 31, 30, 0.68)),
+        url(../../public/image/gallery6.jpg);
+    background-size: cover;
 }
