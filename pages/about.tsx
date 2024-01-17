@@ -124,9 +124,9 @@ export default function About() {
           </div>
         </div>
 
-        <div className='max-w-screen-xl mx-auto px-4 mb-20' data-aos='fade-up' data-aos-duration="800">
+        {/* <div className='max-w-screen-xl mx-auto px-4 mb-20' data-aos='fade-up' data-aos-duration="800">
           <video controls autoPlay muted loop className='h-full w-full'><source src='/videos/A2GirCow.mp4' type="video/mp4" /></video>
-        </div>
+        </div> */}
 
         <div className='max-w-screen-xl mx-auto px-4 mb-20' data-aos='fade-up' data-aos-duration="800">
           <h1 className='text-3xl lg:text-4xl mb-11 ms-0 font-semibold text-center text-lime-500'>Farm to <span className='text-black'>Customer</span>

@@ -5,6 +5,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { GiThreeLeaves } from 'react-icons/gi';
+import Payment from '@/public/image/PaymentImage.jpg'
 
 export default function OrderForm() {
 
@@ -208,9 +209,7 @@ export default function OrderForm() {
     return (
         <Layout>
             <div >
-                <div className="ImageBanner OrderImage h-60 md:h-[70vh] lg:h-[80vh] img_ratio bg-no-repeat flex justify-center items-center">
-                </div>
-                <div className="max-w-screen-xl mx-auto px-4 ">
+                <div className="max-w-screen-xl mx-auto px-4 pt-24 ">
                     <h1 className="text-4xl font-semibold my-6 text-center" data-aos='fade-up' data-aos-duration="800">Order Now
                         <div className='text-lime-600 flex items-center justify-center'><span className='text-gray-300 font-thin'>---------</span><GiThreeLeaves /><span className='text-gray-300 font-thin'>---------</span></div>
                     </h1>
@@ -314,20 +313,23 @@ export default function OrderForm() {
                                         checked={selectedPayment === 'cashOnDelivery'}
                                     /> Cash on Delivery
                                 </label>
-                                {/* <label>
+                                <label>
                                     <input type="radio"
                                         value='onlinePayment'
                                         onChange={handleUserInput}
                                         checked={selectedPayment === 'onlinePayment'}
                                     /> Online Payment
-                                </label> */}
+                                </label>
                                 {errors.selectedPayment && <span className="text-red-500">{errors.selectedPayment}</span>}
                             </div>
                         </div>
 
                         {selectedPayment === 'onlinePayment' && (
                             <div className='max-w-screen-xl mx-auto px-4'>
-                                <h1 className='font-bold mt-5'>Select your Online payment mode:</h1>
+                                <div>
+                                    <h1 className='text-4xl font-bold my-5'>Scan the QR code</h1>
+                                    <Image src={Payment} alt="this is payment image" className='w-full md:w-2/5 text-center' />
+                                </div>
                             </div>
                         )}
 
