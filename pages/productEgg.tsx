@@ -1,8 +1,8 @@
 import Layout from './Layout '
 import OrderBtn from '@/app/components/OrderBtn'
 import Image from 'next/image'
-import Egg from '@/public/image/freeRangeChicken.jpg'
-import Eggs from '@/public/image/Boiled-Eggs.jpeg'
+import Egg from '@/public/image/freeRangeChicken.webp'
+import Eggs from '@/public/image/Boiled-Eggs.webp'
 import { GiThreeLeaves } from 'react-icons/gi'
 
 export default function productEgg() {

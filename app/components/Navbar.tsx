@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 import Logo from './../../public/LabhanyaAgro_Logo.png';
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
-import ghee from '@/public/image/bottle.png';
+import ghee from '@/public/image/bottle.webp';
 import milk from '@/public/image/milk-Bottlle-removebg.png';
-import egg from '@/public/image/eggs-removebg.png';
+import egg from '@/public/image/eggs-removebg.webp';
 import { usePathname } from 'next/navigation';
 
 interface Product {

@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import Layout from './Layout '
 import Image from 'next/image'
-import Ghee1 from './../public/image/ghee1.jpg'
+import Ghee1 from './../public/image/Ghee1.webp'
 import { GiCow, GiThreeLeaves } from "react-icons/gi"
 import { GiMilkCarton } from "react-icons/gi"
 import { LuBadgePercent } from "react-icons/lu"

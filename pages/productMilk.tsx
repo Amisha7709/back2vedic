@@ -1,7 +1,7 @@
 import Layout from './Layout '
 import Image from 'next/image'
-import A2Milk from '@/public/image/drink-milk.jpeg'
-import Coffee from '@/public/image/milk-bottle.jpg'
+import A2Milk from '@/public/image/drink-milk.webp'
+import Coffee from '@/public/image/milk-bottle.webp'
 import OrderBtn from '@/app/components/OrderBtn'
 import { GiThreeLeaves } from 'react-icons/gi'
 

@@ -188,7 +188,7 @@ export default function Contact() {
               <form onSubmit={(e) => { handleSubmit(e) }}>
                 <div className="self-stretch flex md:flex-row flex-col justify-between gap-4 md:gap-8 mb-2">
                   <div className="flex-1 flex flex-col gap-2">
-                    <label className="self-stretch leading-6 font-medium">First name</label>
+                    <label id='firstName' className="self-stretch leading-6 font-medium">First name</label>
                     <input type="text"
                       className={`w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg ${errors.firstName ? 'border-red-500' : ''}`}
                       name="firstName"
@@ -199,7 +199,7 @@ export default function Contact() {
                     {errors.firstName && <span className="text-red-500">{errors.firstName}</span>}
                   </div>
                   <div className="flex-1 flex flex-col gap-2">
-                    <label className="self-stretch leading-6 font-medium">Last name</label>
+                    <label id='lastName' className="self-stretch leading-6 font-medium">Last name</label>
                     <input type="text"
                       className={`w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg ${errors.lastName ? 'border-red-500' : ''}`}
                       name="lastName"
@@ -212,7 +212,7 @@ export default function Contact() {
                 </div>
                 <div className="self-stretch flex md:flex-row flex-col justify-between gap-4 md:gap-8 mb-2">
                   <div className="flex-1 flex flex-col items-start justify-start gap-2">
-                    <label className="self-stretch leading-6 font-medium">Email</label>
+                    <label id='email' className="self-stretch leading-6 font-medium">Email</label>
                     <input type="email"
                       className={`w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg ${errors.email ? 'border-red-500' : ''}`}
                       name="email"
@@ -223,7 +223,7 @@ export default function Contact() {
                     {errors.email && <span className="text-red-500">{errors.email}</span>}
                   </div>
                   <div className="flex-1 flex flex-col items-start justify-start gap-2">
-                    <label className="self-stretch leading-6 font-medium">Phone number</label>
+                    <label id='mobileNo' className="self-stretch leading-6 font-medium">Phone number</label>
                     <input type="number"
                       className={`w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg ${errors.mobileNo ? 'border-red-500' : ''}`}
                       name="mobileNo"
@@ -235,7 +235,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="self-stretch flex flex-col items-start justify-start gap-2 mb-2">
-                  <label className="self-stretch leading-6 font-medium">Your message</label>
+                  <label id='message' className="self-stretch leading-6 font-medium">Your message</label>
                   <textarea typeof=''
                     className={`w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg resize-none ${errors.message ? 'border-red-500' : ''}`}
                     name="message"

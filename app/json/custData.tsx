@@ -1,9 +1,9 @@
-import Customer1 from '@/public/image/customer1.jpg';
-import Customer2 from '@/public/image/customer2.jpg';
-import Customer3 from '@/public/image/customer3.jpg';
-import Customer4 from '@/public/image/customer4.jpg';
-import Customer5 from '@/public/image/customer5.jpg';
-import Customer6 from '@/public/image/customer6.jpg';
+import Customer1 from '@/public/image/customer1.webp';
+import Customer2 from '@/public/image/customer2.webp';
+import Customer3 from '@/public/image/customer3.webp';
+import Customer4 from '@/public/image/customer4.webp';
+import Customer5 from '@/public/image/customer5.webp';
+import Customer6 from '@/public/image/customer6.webp';
 import { StaticImageData } from 'next/image';
 
 interface CustomerItem {

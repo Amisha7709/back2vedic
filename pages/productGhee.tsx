@@ -1,7 +1,7 @@
 import Layout from './Layout '
 import Image from 'next/image'
-import Ghee from '@/public/image/Ghee1.webp'
-import bottle from '@/public/image/ghee-with-food.jpg'
+import Ghee from '@/public/image/Ghee2.webp'
+import bottle from '@/public/image/ghee-with-food.webp'
 import OrderBtn from '@/app/components/OrderBtn'
 import { GiThreeLeaves } from 'react-icons/gi'
 

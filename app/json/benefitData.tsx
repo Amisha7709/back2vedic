@@ -1,11 +1,11 @@
 import Cancer from '@/public/image/ReduceCancer.jpg';
 import HeartHealth from '@/public/image/HeartHealth.webp';
-import Brain from '@/public/image/brain.jpg';
-import Women from '@/public/image/women.jpg';
+import Brain from '@/public/image/brain.webp';
+import Women from '@/public/image/women.webp';
 import Immunity from '@/public/image/immunity.jpg';
 import Hair from '@/public/image/hair.webp';
-import Digestion from '@/public/image/digestion.jpg';
-import HeartAttack from '@/public/image/heartAttack.jpg';
+import Digestion from '@/public/image/digestion.webp';
+import HeartAttack from '@/public/image/heartAttack.webp';
 import { StaticImageData } from 'next/image';
 
 interface BenefitItem {

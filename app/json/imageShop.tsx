@@ -1,6 +1,6 @@
-import Ghee from '@/public/image/bottle.png'
-import Milk from '@/public/image/Milk-Bottle-1liter.jpg'
-import Egg from '@/public/image/eggs.jpg'
+import Ghee from '@/public/image/bottle.webp'
+import Milk from '@/public/image/Milk-Bottle-1liter.webp'
+import Egg from '@/public/image/eggs.webp'
 import { StaticImageData } from 'next/image'
 
 interface ImageItem {

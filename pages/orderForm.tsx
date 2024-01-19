@@ -221,7 +221,7 @@ export default function OrderForm() {
                             </div>
                             <div className="flex md:flex-row flex-col justify-between gap-4 md:gap-8 mb-2">
                                 <div className="mb-4 w-full md:w-1/2 flex-1 flex flex-col items-start justify-start gap-2">
-                                    <label className="block text-lg font-semibold mb-2">First Name</label>
+                                    <label id='firstName' className="block text-lg font-semibold mb-2">First Name</label>
                                     <input type="text"
                                         className="w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg "
                                         name="firstName"
@@ -232,7 +232,7 @@ export default function OrderForm() {
                                     {errors.firstName && <span className="text-red-500">{errors.firstName}</span>}
                                 </div>
                                 <div className="mb-4 w-full md:w-1/2 flex-1 flex flex-col items-start justify-start gap-2">
-                                    <label className="block text-lg font-semibold mb-2"> Last Name</label>
+                                    <label id='lastName' className="block text-lg font-semibold mb-2"> Last Name</label>
                                     <input type="text"
                                         className="w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg "
                                         name="lastName"
@@ -245,7 +245,7 @@ export default function OrderForm() {
                             </div>
                             <div className="flex md:flex-row flex-col justify-between gap-4 md:gap-8 mb-2">
                                 <div className="mb-4 w-full md:w-1/2 flex-1 flex flex-col items-start justify-start gap-2">
-                                    <label className="block text-lg font-semibold mb-2">Email</label>
+                                    <label id='email' className="block text-lg font-semibold mb-2">Email</label>
                                     <input type="email"
                                         className="w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg "
                                         name="email"
@@ -256,7 +256,7 @@ export default function OrderForm() {
                                     {errors.email && <span className="text-red-500">{errors.email}</span>}
                                 </div>
                                 <div className="mb-4 w-full md:w-1/2 flex-1 flex flex-col items-start justify-start gap-2">
-                                    <label className="block text-lg font-semibold mb-2">Mobile number</label>
+                                    <label id='mobileNo' className="block text-lg font-semibold mb-2">Mobile number</label>
                                     <input type="tel"
                                         className="w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg "
                                         name="mobileNo"
@@ -269,7 +269,7 @@ export default function OrderForm() {
                             </div>
                             <div className="self-stretch flex md:flex-row flex-col justify-between gap-4 md:gap-8 mb-2">
                                 <div className="mb-4 w-full md:w-1/2 flex-1 flex flex-col items-start justify-start gap-2">
-                                    <label className="block text-lg font-semibold mb-2">Quantity</label>
+                                    <label id='quantity' className="block text-lg font-semibold mb-2">Quantity</label>
                                     <input type="number"
                                         className="w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg"
                                         name="quantity"
@@ -281,7 +281,7 @@ export default function OrderForm() {
                                 </div>
 
                                 <div className="mb-4 w-full md:w-1/2 flex-1 flex flex-col items-start justify-start gap-2">
-                                    <label className="block text-lg font-semibold mb-2">Price</label>
+                                    <label id='price' className="block text-lg font-semibold mb-2">Price</label>
                                     <input type="number"
                                         className="w-full py-2 px-3 leading-tight border border-gray-400 outline-none text-sm rounded-lg"
                                         id="price"
@@ -292,7 +292,7 @@ export default function OrderForm() {
                                 </div>
                             </div>
                             <div>
-                                <label className="block text-lg font-semibold mb-2">Full Address</label>
+                                <label id='address' className="block text-lg font-semibold mb-2">Full Address</label>
                                 <textarea
                                     name="address" rows={5}
                                     className="py-2 px-3 leading-tight w-full border border-gray-400 outline-none text-sm rounded-lg resize-none"
@@ -305,7 +305,7 @@ export default function OrderForm() {
                             </div>
 
                             <div className="mt-4 w-full flex md:flex-row flex-col items-start justify-start gap-2">
-                                <label className="block text-lg font-semibold md:mr-10">Payment Mode</label>
+                                <label id='paymentMode' className="block text-lg font-semibold md:mr-10">Payment Mode</label>
                                 <label>
                                     <input type="radio"
                                         value='cashOnDelivery'

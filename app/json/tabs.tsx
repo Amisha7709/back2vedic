@@ -1,8 +1,8 @@
-import Process1 from '@/public/image/process1.jpg'
-import Process2 from '@/public/image/process2.jpg'
-import Process3 from '@/public/image/process3.jpg'
-import Process4 from '@/public/image/process4.jpg'
-import Process5 from '@/public/image/process5.jpg'
+import Process1 from '@/public/image/process1.webp'
+import Process2 from '@/public/image/process2.webp'
+import Process3 from '@/public/image/process3.webp'
+import Process4 from '@/public/image/process4.webp'
+import Process5 from '@/public/image/process5.webp'
 
 const tabs = [
     {

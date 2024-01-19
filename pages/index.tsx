@@ -1,16 +1,16 @@
 'use client'
 import Layout from './Layout '
 import Image from 'next/image'
-import Circle1 from './../public/image/gallery1.jpg'
-import Circle2 from './../public/image/heartAttack.jpg'
+import Circle1 from './../public/image/gallery1.webp'
+import Circle2 from './../public/image/heartAttack.webp'
 import Circle3 from './../public/image/immunity.jpg'
-import Circle4 from '@/public/image/circle2.jpg'
+import Circle4 from '@/public/image/circle2.webp'
 import FreqAnsHome from '@/app/components/FreqAnsHome'
 import CustData from '@/app/json/custData'
 import { GiCow, GiMilkCarton, GiThreeLeaves } from "react-icons/gi"
 import { LuBadgePercent } from "react-icons/lu"
 import { FcApproval } from "react-icons/fc"
-import MilkProcess from './../public/image/GirCow.svg'
+import MilkProcess from './../public/image/GirCow.webp'
 import Marquee from "react-fast-marquee";
 import benefitData from '@/app/json/benefitData'
 import AutoSlider from '@/app/components/AutoSlider'
