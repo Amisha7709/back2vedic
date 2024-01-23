@@ -12,7 +12,7 @@ function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           <div>
             <Link href="/">
-              <Image src={Logo} alt="Company Logo" className="h-[240px] mb-4 mx-auto" />
+              <Image src={Logo} alt="Company Logo" className="mb-4 mx-auto" />
             </Link>
             <p className='text-base text-center'>
               For Customer complain / feedback write to message at given Address or Email Id or Call.

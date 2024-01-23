@@ -6,6 +6,7 @@ import Image, { StaticImageData } from 'next/image';
 import ghee from '@/public/image/bottle.webp';
 import milk from '@/public/image/milk-Bottlle-removebg.png';
 import egg from '@/public/image/eggs-removebg.webp';
+import Worm from '@/public/image/vermicomposting.png';
 import { usePathname } from 'next/navigation';
 
 interface Product {
@@ -37,6 +38,11 @@ export default function NavBar() {
             productName: 'Country Eggs',
             productUrl: '/productEgg'
         },
+        {
+            productImages: Worm,
+            productName: 'VermiCompost & Earth Worms',
+            productUrl: '/productCompost'
+        },
     ];
 
     const onMenuClick = () => onNavClick((preNavClick:any) => !preNavClick);
@@ -44,7 +50,7 @@ export default function NavBar() {
     const onMouseOut = () => setHoveredProduct(null);
 
     useEffect(() => {
-        const handleScroll = () => setIsScrolled(window.scrollY > 70);
+        const handleScroll = () => setIsScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
@@ -91,11 +97,11 @@ export default function NavBar() {
                         </li>
                         <li className='relative group '>
                             <Link href='' className={`block py-2 pl-3 pr-4 underline-offset-4 rounded hover:bg-amber-900 hover:text-white
-                                ${pathName === '/productEgg' || pathName === '/productMilk' || pathName === '/productGhee' ? 'text-blue-700 underline' : ''} `}>
+                                ${pathName === '/productEgg' || pathName === '/productMilk' || pathName === '/productGhee' || pathName === '/productCompost' ? 'text-blue-700 underline' : ''} `}>
                                 Product
                             </Link>
 
-                            <ul className="relative lg:absolute lg:text-center hidden w-full lg:w-[150px] bg-white lg:-ml-8 shadow-lg group-hover:block pt-3">
+                            <ul className="relative lg:absolute lg:text-center hidden w-full lg:w-[250px] bg-white lg:-ml-8 shadow-lg group-hover:block pt-3">
                                 {productItem.map((value, index) => (
                                     <li className='relative ' key={index}>
                                         <div>

@@ -1,6 +1,8 @@
 import Ghee from '@/public/image/bottle.webp'
 import Milk from '@/public/image/Milk-Bottle-1liter.webp'
 import Egg from '@/public/image/eggs.webp'
+import Compost from '@/public/image/vermicomposting.png'
+import EarthWorm from '@/public/image/earthWorm.jpg'
 import { StaticImageData } from 'next/image'
 
 interface ImageItem {
@@ -44,6 +46,20 @@ export const imageShop: ImageItem[] = [
         image: Egg,
         price: 150,
         qtn: "6 Piece"
+    },
+
+    {
+        product: "VermiCompost",
+        image: Compost,
+        price: 30,
+        qtn: "1 kg"
+    },
+
+    {
+        product: "Earth Worms",
+        image: EarthWorm,
+        price: 500,
+        qtn: "1 kg"
     },
 ];
 

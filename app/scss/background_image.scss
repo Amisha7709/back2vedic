@@ -17,6 +17,13 @@
     background-image: url(../../public/image/productEgg.webp);
 }
 
+.ProductVermi {
+    background-image: linear-gradient(to bottom,
+            rgb(207 207 199 / 38%),
+            rgb(6 6 6 / 0%)),
+        url(../../public/image/CompostingWorms.webp);
+}
+
 .AboutImage {
     background-image: url(../../public/image/aboutPage.webp);
 }

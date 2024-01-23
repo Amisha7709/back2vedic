@@ -21,7 +21,7 @@ export default function AutoSlider() {
   },);
 
   return (
-    <div className="relative overflow-x-hidden h-60 md:h-[70vh] lg:h-[80vh] grid grid-cols-1">
+    <div className="relative overflow-x-hidden h-52 md:h-[70vh] lg:h-[80vh] grid grid-cols-1">
       {SlideData.map((value, index) => (
         <div
           key={index}
