@@ -67,7 +67,7 @@ export default function NavBar() {
 
                 <button data-collapse-toggle="navbar-user" type="button"
                     onClick={() => onMenuClick() }
-                    className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg lg:hidden ${isScrolled ? 'brightness-50' : ''}`}
+                    className={"inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white bg-amber-900 rounded-lg lg:hidden"}
                     aria-controls="navbar-user" aria-expanded="false">
                     {!navClick &&
                         <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">

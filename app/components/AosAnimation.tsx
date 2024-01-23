@@ -8,7 +8,7 @@ const AosAnimation = () => {
 
         aos.init({
             once: false,
-            delay: 40,
+            delay: 20,
             easing: 'ease-in-sine'
         });
     }, []);
