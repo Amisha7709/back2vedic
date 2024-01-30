@@ -6,7 +6,6 @@ import OrderBtn from '@/app/components/OrderBtn'
 import { GiThreeLeaves } from 'react-icons/gi'
 
 export default function productMilk() {
-
     return (
         <Layout>
             <div>
@@ -59,7 +58,7 @@ export default function productMilk() {
                         Discover a new era of dairy delight with A2 milk a soothing elixir that harmonizes with your digestive system. In this enlightening exploration,
                         we delve deep into the science behind A2 milk and its unique protein composition. Unlike A1 milk, A2 milk is renowned for being easy on the stomach,
                         making it an optimal choice for those seeking digestive comfort.<br />Learn how the absence of A1 beta-casein, a protein commonly found in traditional milk,
-                        contributes to a gentler digestive experience.The specialized protein profile of A2 milk has been associated with reduced discomfort for individuals who may
+                        contributes to a gentler digestive experience. The specialized protein profile of A2 milk has been associated with reduced discomfort for individuals who may
                         experience bloating or digestive issues after consuming regular milk.
                     </p>
                 </div>
@@ -72,7 +71,7 @@ export default function productMilk() {
                                 <div className='text-lime-600 flex items-center justify-center' data-aos="flip-right"><span className='text-gray-300 font-thin'>---------</span><GiThreeLeaves /><span className='text-gray-300 font-thin'>---------</span></div>
                             </h1>
                             <ul className='md:text-lg mb-5 text-gray-600'>
-                                <span className='text-lime-600 font-extrabold'>&#x2713;</span> A2 milk: Ideal for expectant mothers.<br />
+                                <span className='text-lime-600 font-extrabold'>&#x2713;</span> A2 milk Ideal for expectant mothers.<br />
                                 <span className='text-lime-600 font-extrabold'>&#x2713;</span> Crafted for well-being and digestive harmony.<br />
                                 <span className='text-lime-600 font-extrabold'>&#x2713;</span> Unique benefits enhance a comfortable pregnancy.<br />
                                 <span className='text-lime-600 font-extrabold'>&#x2713;</span> Rich nutritional profile supports you and your baby.<br />
@@ -90,9 +89,9 @@ export default function productMilk() {
                         <div className='text-lime-600 flex items-center justify-center' data-aos="flip-right"><span className='text-gray-300 font-thin'>---------</span><GiThreeLeaves /><span className='text-gray-300 font-thin'>---------</span></div>
                     </h1>
                     <p className='md:text-lg mb-5 text-gray-600'>Immerse yourself in the transformative power of A2 milk, a liquid embrace that nurtures your life with each enchanting sip.
-                        Crafted with care, this dairy elixir goes beyond mere sustenance—it becomes a ritual of self-care and indulgence.<br />
+                        Crafted with care, this dairy elixir goes beyond mere sustenance it becomes a ritual of self-care and indulgence.<br />
                         Experience the richness of A2 milk as it unfolds a symphony of essential nutrients, including calcium, protein, and vitamins, nurturing your body and mind.
-                        With each sip, you&apos;re not just consuming a beverage; you&apos;re inviting a wave of nourishment that supports your overall well-being.
+                        With each sip, you&apos;re not just consuming a beverage you&apos;re inviting a wave of nourishment that supports your overall well-being.
                     </p>
                 </div>
                 <div className='lg:hidden'><OrderBtn /></div>

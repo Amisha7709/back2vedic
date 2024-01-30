@@ -26,7 +26,7 @@ export default function Contact() {
     mobileNo: "",
     message: "",
     checkbox: "",
-  })
+  });
 
   const clearInput = () => {
     setFirstName("");
@@ -35,7 +35,7 @@ export default function Contact() {
     setMobileNo("");
     setMessage("");
     setIsChecked(false);
-  }
+  };
 
   const validate = (name: string, value: any): string => {
     switch (name) {

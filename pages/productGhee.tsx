@@ -6,8 +6,6 @@ import OrderBtn from '@/app/components/OrderBtn'
 import { GiThreeLeaves } from 'react-icons/gi'
 
 export default function productGhee() {
-
-
     return (
         <Layout>
             <div>
@@ -40,8 +38,8 @@ export default function productGhee() {
                                 <span className='text-lime-600 font-extrabold'>&#x2713;</span> Immerse in rich, nutty aromas and buttery goodness.<br />
                                 <span className='text-lime-600 font-extrabold'>&#x2713;</span> Lactose-free delight for a wholesome cooking experience.<br />
                                 <span className='text-lime-600 font-extrabold'>&#x2713;</span> Elevate dishes with flavor and nourishment of A2 Ghee.<br />
-                                <span className='text-lime-600 font-extrabold'>&#x2713;</span> Individual responses may vary; benefits based on anecdotes.<br />
-                                <span className='text-lime-600 font-extrabold'>&#x2713;</span> Limited research; consult healthcare professionals for advice.<br />
+                                <span className='text-lime-600 font-extrabold'>&#x2713;</span> Individual responses may vary benefits based on anecdotes.<br />
+                                <span className='text-lime-600 font-extrabold'>&#x2713;</span> Limited research consult healthcare professionals for advice.<br />
                                 <span className='text-lime-600 font-extrabold'>&#x2713;</span> Consider personal health concerns with dietary changes.<br />
                                 <span className='text-lime-600 font-extrabold'>&#x2713;</span> Experience the goodness but consult for personalized guidance.<br />
                             </ul>
@@ -85,9 +83,9 @@ export default function productGhee() {
                     <h1 className='text-3xl lg:text-4xl mb-12 font-semibold text-center text-lime-500'>Enjoy A2 Ghee <span className='text-black'>perfect for lactose-friendly!</span>
                         <div className='text-lime-600 flex items-center justify-center' data-aos="flip-right"><span className='text-gray-300 font-thin'>---------</span><GiThreeLeaves /><span className='text-gray-300 font-thin'>---------</span></div>
                     </h1>
-                    <p className='md:text-lg mb-5 text-gray-600'>Enjoy delicious food without worrying about lactose with A2 Ghee! A2 Ghee is a luxurious option that can make your cooking experience even better.
+                    <p className='md:text-lg mb-5 text-gray-600'>Enjoy delicious food without worrying about lactose with A2 Ghee. A2 Ghee is a luxurious option that can make your cooking experience even better.
                         It&apos;s a type of clarified butter that&apos;s easy on those who are sensitive to lactose. So, you can elevate your culinary adventures without compromising on taste or worrying about any lactose-related issues.<br />
-                        Upgrade your meals with the richness and flavor of A2 Ghee for a delightful and worry-free cooking experience! A2 Ghee, derived from the milk of cows that exclusively produce A2 beta-casein protein,
+                        Upgrade your meals with the richness and flavor of A2 Ghee for a delightful and worry-free cooking experience. A2 Ghee, derived from the milk of cows that exclusively produce A2 beta-casein protein,
                         stands as a lactose-friendly alternative, making it a perfect choice for those with lactose intolerance. The result is a rich, nutty flavor that
                         enhances the taste of your favorite dishes while also offering potential digestive benefits.
                     </p>

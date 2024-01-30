@@ -9,7 +9,7 @@ const AosAnimation = () => {
         aos.init({
             once: false,
             delay: 20,
-            easing: 'ease-in-sine'
+            easing: 'ease-in-sine',
         });
     }, []);
 }

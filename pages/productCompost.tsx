@@ -22,7 +22,7 @@ export default function productCompost() {
                     <p className='md:text-lg mb-5 text-gray-600'>
                         Compost worms, also known as red wigglers (Eisenia fetida), are a specific type of earthworm commonly used in vermicomposting, a sustainable and efficient method of recycling organic waste. These worms are highly adapted to the decomposition of organic matter and thrive in rich,
                         decomposing environments. Here&apos;s some key information about compost worms. Compost worms are an integral part of sustainable waste management and contribute to the creation of nutrient-rich soil amendments. Their ability to efficiently convert organic waste into valuable compost
-                        makes them a valuable asset in both home and commercial composting systems.Various species of earthworms, with the common garden worm being Lumbricus terrestris.Feed on soil, extracting nutrients from decomposing organic matter and mineral particles.
+                        makes them a valuable asset in both home and commercial composting systems. Various species of earthworms, with the common garden worm being Lumbricus terrestris. Feed on soil, extracting nutrients from decomposing organic matter and mineral particles.
                         Hermaphroditic, with most species requiring a mate for reproduction.
                     </p>
                 </div>

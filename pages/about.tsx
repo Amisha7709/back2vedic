@@ -38,7 +38,7 @@ export default function About() {
               <p className='mb-5 md:text-lg text-gray-600'>Labhanya Agro Farm objective is to promote agroecological principles and support rural entrepreneurship through prioritizing the development of skills and knowledge.
                 We are committed to achieving sustainable growth by consistently providing excellent customer service, encouraging innovation, maintaining high-quality standards, and demonstrating unwavering dedication.<br />
                 These values not only enhance agricultural practices rooted in sustainability but also create economic opportunities for rural communities to prosper. By combining profitability with principles, we aim to establish
-                a balanced and sustainable model that benefits both our customers and the communities we serve.Our primary focus is on achieving profitable growth through the consistent delivery of exceptional customer service, promoting innovation,
+                a balanced and sustainable model that benefits both our customers and the communities we serve. Our primary focus is on achieving profitable growth through the consistent delivery of exceptional customer service, promoting innovation, 
                 upholding uncompromising quality standards, and maintaining an unwavering commitment. These values not only strengthen sustainable agricultural practices but also provide rural communities with opportunities for economic prosperity.
               </p>
             </div>
@@ -75,7 +75,7 @@ export default function About() {
           </h1>
           <p className='md:text-lg mb-5 text-gray-600'>
             Gir cows and chickens reared in a free-range setting offer numerous advantages. Gir cows, renowned for their <Link href='/productMilk' className='text-blue-700 font-semibold hover:underline'>A2 milk</Link>,
-            produce milk and <Link href='/productGhee' className='text-blue-700 font-semibold hover:underline'>A2 Ghee</Link> that may contain higher levels of nutrients like omega-3 fatty acids and vitamin D. Our Free-ranging Gir cows offer a range of benefits stemming from their natural
+            produce milk and <Link href='/productGhee' className='text-blue-700 font-semibold hover:underline'>A2 Ghee</Link> that may contain higher levels of nutrients like omega-3 fatty acids and vitamin D. Our Free-ranging Gir cows offer a range of benefits stemming from their natural. 
             This is attributed to their access to diverse pastures and natural grazing. The free-ranging environment enables them to engage in natural behaviors,
             thereby promoting their overall well-being.<br /> Similarly, free-ranging chickens have the opportunity to search for insects and plants, resulting in <Link href='/productEgg' className='text-blue-700 font-semibold hover:underline'>Country Eggs</Link> with elevated levels of
             omega-3 fatty acids, antioxidants, and vitamin D. Both practices contribute to animal welfare as they allow the animals to express their natural behaviors and live in conditions that align more closely with their instincts. Moreover, these practices often yield higher-quality

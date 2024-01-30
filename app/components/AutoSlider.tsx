@@ -14,7 +14,7 @@ export default function AutoSlider() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % SlideData.length);
+      setCurrentIndex(prevIndex => (prevIndex + 1) % SlideData.length);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -28,7 +28,7 @@ export default function AutoSlider() {
           className={`absolute w-full h-full ${index === currentIndex ? 'opacity-100' : 'opacity-0'
             } transition-opacity duration-1000 ease-in-out`}
         >
-          <Image src={value.image} alt={`Slide ${index + 1}`} className="w-full h-full relative object-fill" />
+          <Image src={value.image} alt={`Slide ${index + 1}`} className="w-full h-full object-fill" />
         </div>
       ))}
     </div>

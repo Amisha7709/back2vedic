@@ -26,8 +26,6 @@ export default function OrderForm() {
     const [selectedProduct, setSelectedProduct] = useState('');
     const [selectedImage, setSelectedImage] = useState('');
 
-    console.log("selectedImage", selectedImage)
-
     useEffect(() => {
         const { price, product, image } = query;
         setSelectedProductPrice(price as string);
@@ -50,7 +48,7 @@ export default function OrderForm() {
         totalPrice: "",
         address: "",
         selectedPayment: "",
-    })
+    });
 
     const clearInput = () => {
         setFirstName("");
@@ -61,7 +59,7 @@ export default function OrderForm() {
         setTotalPrice(0);
         setAddress("");
         setSelectedPayment("");
-    }
+    };
 
     const validate = (name: string, value: any) => {
         switch (name) {

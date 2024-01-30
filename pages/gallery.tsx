@@ -37,15 +37,15 @@ export default function Gallery() {
                             galleryImg.map((value, index: number) => (
                                 <div key={index} className="flex w-full flex-wrap gallery1">
                                     <div className="w-1/2 p-1 md:p-2" data-aos="fade-zoom-in" data-aos-duration="800">
-                                        <Image alt="gallery" src={value.img1} className="block h-full w-full rounded-lg object-cover object-center"
+                                        <Image alt="gallery" src={value.img1} className="block h-full w-full cursor-pointer rounded-lg object-cover object-center"
                                             onClick={() => handleImageClick(value.img1)} />
                                     </div>
                                     <div className="w-1/2 p-1 md:p-2" data-aos="fade-zoom-in" data-aos-duration="800">
-                                        <Image alt="gallery" src={value.img2} className="block h-full w-full rounded-lg object-cover object-center"
+                                        <Image alt="gallery" src={value.img2} className="block h-full w-full cursor-pointer rounded-lg object-cover object-center"
                                             onClick={() => handleImageClick(value.img2)} />
                                     </div>
                                     <div className="w-full p-1 md:p-2" data-aos="fade-zoom-in" data-aos-duration="800">
-                                        <Image alt="gallery" src={value.img3} className="block h-full w-full rounded-lg object-cover object-center"
+                                        <Image alt="gallery" src={value.img3} className="block h-full w-full cursor-pointer rounded-lg object-cover object-center"
                                             onClick={() => handleImageClick(value.img3)} />
                                     </div>
                                 </div>

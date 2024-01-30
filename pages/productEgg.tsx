@@ -6,7 +6,6 @@ import Eggs from '@/public/image/Boiled-Eggs.webp'
 import { GiThreeLeaves } from 'react-icons/gi'
 
 export default function productEgg() {
-
     return (
         <Layout>
             <div>

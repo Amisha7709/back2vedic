@@ -5,7 +5,6 @@ import '@/app/globals.css'
 import '@/app/scss/index.scss'
 import { FaWhatsappSquare } from "react-icons/fa";
 import AosAnimation from "@/app/components/AosAnimation";
-import Link from "next/link"
 
 export default function Layout({ children }: { children: React.ReactNode }) {
 

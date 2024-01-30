@@ -40,7 +40,7 @@ export default function index() {
               This ensures that our ghee and other products are made with 100% natural ingredients, resulting in the best desi cow milk products available in Nagpur.<br />
               Our commitment to sustainability is evident in our free-range egg poultry farming technique, which allows our chickens to freely roam outdoors for a portion of the day.
               Additionally, we prioritize hygiene by utilizing sustainable and minimalistic packaging. By choosing our natural A2 milk products and eggs, customers in Nagpur can experience
-              the numerous nutritional benefits of our farm and poultry products on a daily basis. Know <Link href='/productEgg' className='text-blue-700 font-semibold hover:underline'>about Us</Link> what is Labhanya Agro Farm mission and vision.</p>
+              the numerous nutritional benefits of our farm and poultry products on a daily basis. Know <Link href='/about' className='text-blue-700 font-semibold hover:underline'>about Us</Link> what is Labhanya Agro Farm mission and vision.</p>
           </div>
         </div>
 
@@ -57,7 +57,7 @@ export default function index() {
             <div className='my-9 ' data-aos="fade-up" data-aos-duration="800">
               <LuBadgePercent className='mx-auto w-14 h-14 text-green-500' />
               <h1 className='font-bold text-lg'>100% Natural</h1>
-              <p className='text-gray-700'>Our product undergoes no removal or addition processes; it maintains its natural purity and nutritional integrity. Its inherent sweetness and delicious taste.</p>
+              <p className='text-gray-700'>Our product undergoes no removal or addition processes it maintains its natural purity and nutritional integrity. Its inherent sweetness and delicious taste.</p>
             </div>
           </div>
           <div className='my-auto mx-auto' data-aos='fade-up' data-aos-duration="800">
@@ -72,7 +72,7 @@ export default function index() {
             <div className='my-9 ' data-aos="fade-up" data-aos-duration="800">
               <FcApproval className='mx-auto w-14 h-14' />
               <h1 className='font-bold text-lg'>Best Quality</h1>
-              <p className='text-gray-700'>We prioritize the well-being of our cows to ensure their constant happiness. Utilizing handed packaging processes,the premium standards quality.</p>
+              <p className='text-gray-700'>We prioritize the well-being of our cows to ensure their constant happiness. Utilizing handed packaging processes, the premium standards quality.</p>
             </div>
             <div className='my-9' data-aos="fade-up" data-aos-duration="800">
               <GiMilkCarton className='mx-auto w-14 h-14 text-gray-600' />

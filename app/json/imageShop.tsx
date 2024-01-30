@@ -1,4 +1,4 @@
-import Ghee from '@/public/image/bottle.webp'
+import Ghee from '@/public/image/gheebottle.webp'
 import Milk from '@/public/image/Milk-Bottle-1liter.webp'
 import Egg from '@/public/image/eggs.webp'
 import Compost from '@/public/image/vermicomposting.png'

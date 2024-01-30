@@ -1,9 +1,9 @@
 'use client'
 import { useEffect, useState } from 'react';
-import Logo from './../../public/LabhanyaAgro_Logo.png';
+import Logo from './../../public/LabhanyaAgro_Logo.webp';
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
-import ghee from '@/public/image/bottle.webp';
+import ghee from '@/public/image/gheebottle.webp';
 import milk from '@/public/image/milk-Bottlle-removebg.png';
 import egg from '@/public/image/eggs-removebg.webp';
 import Worm from '@/public/image/vermicomposting.png';
