@@ -181,7 +181,7 @@ export default function OrderForm() {
 
         if (Object.values(formData).every((value) => value)) {
             try {
-                const response = await axios.post('https://info.labhi.in/backtovedic-php/server.php', formData, {
+                const response = await axios.post('https://labhanyafarms.com/server.php', formData, {
                     headers: {
                         'Content-Type': 'application/json',
                     },
