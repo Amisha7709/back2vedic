@@ -89,9 +89,9 @@ export default function productMilk() {
                         <div className='text-lime-600 flex items-center justify-center' data-aos="flip-right"><span className='text-gray-300 font-thin'>---------</span><GiThreeLeaves /><span className='text-gray-300 font-thin'>---------</span></div>
                     </h1>
                     <p className='md:text-lg mb-5 text-gray-600'>Immerse yourself in the transformative power of A2 milk, a liquid embrace that nurtures your life with each enchanting sip.
-                        Crafted with care, this dairy elixir goes beyond mere sustenance it becomes a ritual of self-care and indulgence.<br />
+                        Crafted with care, this dairy elixir goes beyond mere sustenance, it becomes a ritual of self-care and indulgence.<br />
                         Experience the richness of A2 milk as it unfolds a symphony of essential nutrients, including calcium, protein, and vitamins, nurturing your body and mind.
-                        With each sip, you&apos;re not just consuming a beverage you&apos;re inviting a wave of nourishment that supports your overall well-being.
+                        With each sip, you&apos;re not just consuming a beverage, you&apos;re inviting a wave of nourishment that supports your overall well-being.
                     </p>
                 </div>
                 <div className='lg:hidden'><OrderBtn /></div>

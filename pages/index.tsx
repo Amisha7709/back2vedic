@@ -57,7 +57,7 @@ export default function index() {
             <div className='my-9 ' data-aos="fade-up" data-aos-duration="800">
               <LuBadgePercent className='mx-auto w-14 h-14 text-green-500' />
               <h1 className='font-bold text-lg'>100% Natural</h1>
-              <p className='text-gray-700'>Our product undergoes no removal or addition processes it maintains its natural purity and nutritional integrity. Its inherent sweetness and delicious taste.</p>
+              <p className='text-gray-700'>Our product undergoes no removal or addition processes, it maintains its natural purity and nutritional integrity. Its inherent sweetness and delicious taste.</p>
             </div>
           </div>
           <div className='my-auto mx-auto' data-aos='fade-up' data-aos-duration="800">

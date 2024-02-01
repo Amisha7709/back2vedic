@@ -104,11 +104,11 @@ export default function About() {
             <div className='text-center shadow-2xl hover:shadow-none p-3'>
               <GiCow className='mx-auto w-14 h-14 text-amber-800' />
               <h1 className='font-bold text-lg '>Continuously Revitalized</h1>
-              <p className='text-gray-600'>The supply and cold chain management of product ensures its freshness as it is delivered daily while maintaining a temperature. The entire process is handled with utmost hygiene, resulting in pure, natural, and fresh .</p>
+              <p className='text-gray-600'>The supply and cold chain management of product ensures its freshness as it is delivered daily while maintaining a temperature. The entire process is handled with utmost hygiene, resulting in pure, natural, and fresh.</p>
             </div>
             <div className='text-center shadow-2xl hover:shadow-none p-3'>
               <LuBadgePercent className='mx-auto w-14 h-14 text-green-500' />
-              <h1 className='font-bold text-lg'>Completely natural.</h1>
+              <h1 className='font-bold text-lg'>Completely natural</h1>
               <p className='text-gray-600'>No alterations are made to product, neither removing nor adding anything. It maintains its natural state, ensuring its nutritional value is preserved. The taste is both sweet and delectable.</p>
             </div>
             <div className='text-center shadow-2xl hover:shadow-none p-3'>

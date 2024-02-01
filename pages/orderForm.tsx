@@ -19,7 +19,6 @@ export default function OrderForm() {
     const [selectedPayment, setSelectedPayment] = useState("");
     const [result, setResult] = useState({ message: '' });
 
-
     const router = useRouter();
     const { query } = router;
     const [selectedProductPrice, setSelectedProductPrice] = useState('');
@@ -35,7 +34,6 @@ export default function OrderForm() {
 
     useEffect(() => {
         const initialtotalPrice = Number(quantity) * Number(selectedProductPrice);
-        // Update total price state
         setTotalPrice(initialtotalPrice);
     }, [quantity, selectedProductPrice]);
 
@@ -104,7 +102,7 @@ export default function OrderForm() {
                     return "";
                 }
             case "selectedPayment":
-                if (!value || value.trim() === "") {
+                if (!value) {
                     return "please select payment mode";
                 } else {
                     return "";
@@ -117,7 +115,6 @@ export default function OrderForm() {
 
     const handleUserInput = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
-        setSelectedPayment(value);
 
         setErrors(prevErrors => ({
             ...prevErrors,
@@ -304,20 +301,19 @@ export default function OrderForm() {
 
                             <div className="mt-4 w-full flex md:flex-row flex-col items-start justify-start gap-2">
                                 <label id='paymentMode' className="block text-lg font-semibold md:mr-10">Payment Mode</label>
-                                <label>
-                                    <input type="radio"
-                                        value='cashOnDelivery'
-                                        onChange={handleUserInput}
-                                        checked={selectedPayment === 'cashOnDelivery'}
-                                    /> Cash on Delivery
-                                </label>
-                                <label>
-                                    <input type="radio"
-                                        value='onlinePayment'
-                                        onChange={handleUserInput}
-                                        checked={selectedPayment === 'onlinePayment'}
-                                    /> Online Payment
-                                </label>
+                                <input type="radio"
+                                    name='selectedPayment'
+                                    value='cashOnDelivery'
+                                    onChange={handleUserInput}
+                                    checked={selectedPayment === 'cashOnDelivery'}
+                                /> Cash on Delivery
+
+                                <input type="radio"
+                                    name='selectedPayment'
+                                    value='onlinePayment'
+                                    onChange={handleUserInput}
+                                    checked={selectedPayment === 'onlinePayment'}
+                                /> Online Payment
                                 {errors.selectedPayment && <span className="text-red-500">{errors.selectedPayment}</span>}
                             </div>
                         </div>
@@ -331,7 +327,7 @@ export default function OrderForm() {
                             </div>
                         )}
 
-                        <div className="flex items-center justify-center p-5 ">
+                        <div className="flex items-center justify-center p-5">
                             <button className="btn-primary px-20" type="submit"> Place Order </button>
                         </div>
                     </form>
