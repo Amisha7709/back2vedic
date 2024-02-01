@@ -143,7 +143,7 @@ export default function Contact() {
 
     if (Object.values(contactData).every((value) => value)) {
       try {
-        const response = await axios.post('https://info.labhi.in/backtovedic-php/server.php', contactData, {
+        const response = await axios.post('https://labhanyafarms.com/server.php', contactData, {
           headers: {
             'Content-Type': 'application/json',
           },

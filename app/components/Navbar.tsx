@@ -91,13 +91,13 @@ export default function NavBar() {
                         </li>
                         <li className='rounded hover:bg-amber-900 hover:text-white'>
                             <Link href="/about" className={`block py-2 pl-3 pr-4 underline-offset-4
-                                ${pathName === '/about' ? 'text-blue-700 underline' : ''} `}>
+                                ${pathName === '/about/' ? 'text-blue-700 underline' : ''} `}>
                             About Us
                             </Link>
                         </li>
                         <li className='relative group '>
                             <Link href='' className={`block py-2 pl-3 pr-4 underline-offset-4 rounded hover:bg-amber-900 hover:text-white
-                                ${pathName === '/productEgg' || pathName === '/productMilk' || pathName === '/productGhee' || pathName === '/productCompost' ? 'text-blue-700 underline' : ''} `}>
+                                ${pathName === '/productEgg/' || pathName === '/productMilk/' || pathName === '/productGhee/' || pathName === '/productCompost/' ? 'text-blue-700 underline' : ''} `}>
                                 Product
                             </Link>
 
@@ -112,7 +112,7 @@ export default function NavBar() {
                                         <Link onMouseOver={() => onMouseOver(value.productImages)}
                                             onMouseOut={onMouseOut} href={`${value.productUrl}`}
                                             className={`block relative px-6 py-2 border-b-2 hover:text-lime-500
-                                            ${pathName === `${value.productUrl}` ? ' text-blue-700 underline' : ''}`} >
+                                            ${pathName === `${value.productUrl}/` ? ' text-blue-700 underline' : ''}`} >
                                             {value.productName}
                                         </Link>
                                     </li>
@@ -122,19 +122,19 @@ export default function NavBar() {
                         <li className='rounded hover:bg-amber-900 hover:text-white'>
                             <Link
                                 href="/shop" className={`block py-2 pl-3 pr-4 underline-offset-4 
-                                ${pathName === '/shop' ? 'text-blue-700 underline' : ''} `} >
+                                ${pathName === '/shop/' ? 'text-blue-700 underline' : ''} `} >
                                 Shop
                             </Link>
                         </li>
                         <li className='rounded hover:bg-amber-900 hover:text-white'>
                             <Link href="/gallery" className={`block py-2 pl-3 pr-4 underline-offset-4 
-                                ${pathName === '/gallery' ? 'text-blue-700 underline' : ''} `} >
+                                ${pathName === '/gallery/' ? 'text-blue-700 underline' : ''} `} >
                                 Gallery
                             </Link>
                         </li>
                         <li className='rounded hover:bg-amber-900 hover:text-white'>
                             <Link href="/contact" className={`block py-2 pl-3 pr-4 underline-offset-4 
-                                ${pathName === '/contact' ? 'text-blue-700 underline' : ''} `}>
+                                ${pathName === '/contact/' ? 'text-blue-700 underline' : ''} `}>
                                 Contact
                             </Link>
                         </li>
