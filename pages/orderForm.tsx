@@ -299,7 +299,7 @@ export default function OrderForm() {
                                 {errors.address && <span className="text-red-500">{errors.address}</span>}
                             </div>
 
-                            <div className="mt-4 w-full flex md:flex-row flex-col items-start justify-start gap-2">
+                            <div className="mt-4 w-full flex md:flex-row flex-col items-center justify-start gap-2">
                                 <label id='paymentMode' className="block text-lg font-semibold md:mr-10">Payment Mode</label>
                                 <input type="radio"
                                     name='selectedPayment'
@@ -311,6 +311,7 @@ export default function OrderForm() {
                                 <input type="radio"
                                     name='selectedPayment'
                                     value='onlinePayment'
+                                    className='ml-5'
                                     onChange={handleUserInput}
                                     checked={selectedPayment === 'onlinePayment'}
                                 /> Online Payment
